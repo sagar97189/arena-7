@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   Award,
   Users,
@@ -11,10 +10,18 @@ import {
   ArrowRight,
   GraduationCap,
   Target,
-  Zap
+  Zap,
+  Phone
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const FeatureCard = ({ 
   icon: Icon, 
@@ -157,6 +164,7 @@ const WhyChooseUs = () => {
   const [activeFeature, setActiveFeature] = useState<number>(0);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef);
+  const phoneNumber = "+919213404924";
 
   const features = [
     {
@@ -285,11 +293,99 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-20 text-center"
         >
-          <Button 
-            className="bg-arena-orange hover:bg-arena-blue text-white text-lg py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Creative Journey
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                className="bg-arena-orange hover:bg-arena-blue text-white text-lg py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Creative Journey
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[500px] p-6 bg-white rounded-xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-arena-blue text-center">
+                  Start Your Creative Journey
+                </DialogTitle>
+                <p className="text-center text-gray-600 mt-2">
+                  Fill out the form below or contact us directly
+                </p>
+              </DialogHeader>
+
+              <div className="mt-6">
+                <div className="mb-6 p-4 bg-green-50 rounded-lg">
+                  <div className="flex items-center gap-3 text-green-700">
+                    <Phone className="w-5 h-5" />
+                    <div>
+                      <p className="font-medium">Contact us directly:</p>
+                      <a href={`tel:${phoneNumber}`} className="hover:underline">{phoneNumber}</a>
+                    </div>
+                  </div>
+                </div>
+
+                <form>
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="modal-name" className="block text-gray-700 mb-1">Full Name*</label>
+                      <input
+                        type="text"
+                        id="modal-name"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-arena-orange"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="modal-email" className="block text-gray-700 mb-1">Email Address*</label>
+                      <input
+                        type="email"
+                        id="modal-email"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-arena-orange"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="modal-phone" className="block text-gray-700 mb-1">Phone Number*</label>
+                      <input
+                        type="tel"
+                        id="modal-phone"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-arena-orange"
+                        placeholder="Your Phone"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="modal-course" className="block text-gray-700 mb-1">Course Interest*</label>
+                      <select
+                        id="modal-course"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-arena-orange"
+                        required
+                      >
+                        <option value="">Select Course</option>
+                        <option value="Animation & VFX Prime">Animation & VFX Prime</option>
+                        <option value="Game Art & Design">Game Art & Design</option>
+                        <option value="Graphic & Web Design">Graphic & Web Design</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="modal-message" className="block text-gray-700 mb-1">Message</label>
+                      <textarea
+                        id="modal-message"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-arena-orange"
+                        placeholder="Your Message"
+                        rows={3}
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <Button className="w-full bg-arena-orange hover:bg-arena-blue text-white py-3 text-lg mt-6">
+                    Submit Enquiry
+                  </Button>
+                </form>
+              </div>
+            </DialogContent>
+          </Dialog>
         </motion.div>
       </div>
     </section>

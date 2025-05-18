@@ -8,11 +8,21 @@ import {
   Target, 
   Briefcase,
   ChevronRight,
-  CheckCircle2
+  CheckCircle2,
+  Phone,
+  Mail,
+  MessageSquare
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface BenefitCategory {
   id: string;
@@ -134,6 +144,9 @@ const BenefitCard = ({
 
 const BenefitsSection = () => {
   const [activeCategory, setActiveCategory] = useState<string>("academic");
+  const phoneNumber = "+919213404924";
+  const whatsappNumber = "+919213404924";
+  const emailAddress = "info@arena-faridabad.com";
 
   return (
     <AnimatedSection className="py-20 bg-arena-lightgray relative overflow-hidden" delay={0.2}>
@@ -230,11 +243,62 @@ const BenefitsSection = () => {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="text-center"
         >
-          <Button 
-            className="bg-arena-orange hover:bg-arena-blue text-white text-lg py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Journey Today
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                className="bg-arena-orange hover:bg-arena-blue text-white text-lg py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Journey Today
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[500px] p-6 bg-white rounded-xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-arena-blue text-center mb-6">
+                  Contact Us
+                </DialogTitle>
+              </DialogHeader>
+
+              <div className="space-y-6">
+                {/* WhatsApp */}
+                <a 
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+                >
+                  <MessageSquare className="w-6 h-6 text-green-600 mr-4" />
+                  <div>
+                    <p className="font-medium text-green-700">WhatsApp</p>
+                    <p className="text-green-600">{whatsappNumber}</p>
+                  </div>
+                </a>
+
+                {/* Phone */}
+                <a 
+                  href={`tel:${phoneNumber}`}
+                  className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                >
+                  <Phone className="w-6 h-6 text-blue-600 mr-4" />
+                  <div>
+                    <p className="font-medium text-blue-700">Phone</p>
+                    <p className="text-blue-600">{phoneNumber}</p>
+                  </div>
+                </a>
+
+                {/* Email */}
+                <a 
+                  href={`mailto:${emailAddress}`}
+                  className="flex items-center p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors"
+                >
+                  <Mail className="w-6 h-6 text-orange-600 mr-4" />
+                  <div>
+                    <p className="font-medium text-orange-700">Email</p>
+                    <p className="text-orange-600">{emailAddress}</p>
+                  </div>
+                </a>
+              </div>
+            </DialogContent>
+          </Dialog>
         </motion.div>
       </div>
     </AnimatedSection>
