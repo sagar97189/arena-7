@@ -87,35 +87,45 @@ const TestimonialsSection = () => {
   
   const testimonials = [
     {
-      quote: "Arena Animation gave me the skills and confidence to pursue my dream career. The faculty support was outstanding and helped me land my first job at a leading animation studio.",
-      name: "Rahul Sharma",
-      position: "3D Animator at DreamWorks",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "My experience at Arena Animation Sector-7 Faridabad is great and memorable. The mentors at Arena Animation Sector-7 Faridabad helped us enhance my academic and interpersonal skills. I am thankful to Training & Placement cell for providing a platform to enhance my skills and an opportunity to showcase them. In the last I am saying that The World is here at Arena Animation Sector-7 Faridabad.",
+      name: "Tushar Jain",
+      position: "Former Student",
+      image: "/images/testimonials/student1.jpg",
       rating: 5
     },
     {
-      quote: "The practical approach to learning at Arena Animation helped me master industry-standard software quickly. The placement assistance was invaluable in kickstarting my career.",
-      name: "Priya Patel",
-      position: "VFX Artist at Red Chillies",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "Great experience from Arena Animation Sector-7 Faridabad. You get a lot of opportunities. Work hard to get it. Be prepared for everything. Maintain your attendance.",
+      name: "Gaurav",
+      position: "Former Student",
+      image: "/images/testimonials/student2.jpg",
       rating: 5
     },
     {
-      quote: "Joining Arena was the best decision of my life. The curriculum is well-structured and up-to-date with industry requirements, which gave me a competitive edge in the job market.",
-      name: "Vikram Singh",
-      position: "Game Developer at Ubisoft",
-      image: "https://randomuser.me/api/portraits/men/22.jpg",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      rating: 4
+      quote: "Arena Animation Sector-7 Faridabad is a place where you can find an amalgamation of learning. I feel great studying at Arena Animation Sector-7 Faridabad as it gives great opportunity as well as support from faculties and placement officers. Getting placed in HCL is an achievement for me for which i would like to thank Arena Animation Sector-7 Faridabad.",
+      name: "Praveen Sharma",
+      position: "Placed at HCL",
+      image: "/images/testimonials/student3.jpg",
+      rating: 5
     },
     {
-      quote: "The mentorship I received at Arena Animation Faridabad was exceptional. They not only taught me technical skills but also how to approach creative challenges professionally.",
-      name: "Neha Gupta",
-      position: "Graphic Designer at Ogilvy",
-      image: "https://randomuser.me/api/portraits/women/29.jpg",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "Arena Animation Sector-7 Faridabad and faculties have put in all the efforts to groom us and make us corporate professionals. It was a wonderful experience at Arena Animation Sector-7 Faridabad.",
+      name: "Abhilash",
+      position: "Former Student",
+      image: "/images/testimonials/student4.jpg",
+      rating: 5
+    },
+    {
+      quote: "Arena Animation Sector-7 Faridabad has always believed in helping and guiding its students and it was no different during the placement season. Regular classes held at our institute to help us with our aptitude and technical skills were of great help. Our placement administration staff also guided and encouraged us at each step thereby helping me secure my placement at such a reputed company.",
+      name: "Neeraj",
+      position: "Placed Student",
+      image: "/images/testimonials/student5.jpg",
+      rating: 5
+    },
+    {
+      quote: "I definitely would recommend Arena Animation Sector-7 Faridabad and would encourage students to study hard and inform themselves as much as possible about the several academic opportunities the Institution offers. Our institute takes the educational mission to heart, here you will find people that will support you and guide you on the path to your career.",
+      name: "Sunandini",
+      position: "Former Student",
+      image: "/images/testimonials/student6.jpg",
       rating: 5
     }
   ];

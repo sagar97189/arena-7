@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# Arena Animation Sector 7 Faridabad
 
-## Project info
+A modern, responsive website for Arena Animation Sector 7 Faridabad, built with React and TypeScript.
 
-**URL**: https://lovable.dev/projects/3e51d367-bb77-4cea-a29e-a9e75ca3474c
+## Features
 
-## How can I edit this code?
+- Modern UI/UX design
+- Responsive layout for all devices
+- Course catalog
+- Student gallery
+- Contact form
+- Placement information
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Radix UI
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3e51d367-bb77-4cea-a29e-a9e75ca3474c) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
 
-**Use your preferred IDE**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Run development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Build for production:
+```bash
+npm run build
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+  ├── components/     # Reusable components
+  ├── sections/       # Page sections
+  ├── styles/        # Global styles
+  ├── lib/           # Utilities
+  └── assets/        # Static assets
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contributing
 
-## What technologies are used for this project?
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3e51d367-bb77-4cea-a29e-a9e75ca3474c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is proprietary and confidential.

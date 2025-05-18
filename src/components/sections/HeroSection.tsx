@@ -1,8 +1,17 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div className="relative bg-arena-blue text-white min-h-[600px] flex items-center">
       <div className="absolute inset-0 overflow-hidden">
@@ -24,10 +33,17 @@ const HeroSection = () => {
             Join Sector 7 Faridabad's leading animation institute.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button className="bg-arena-orange hover:bg-white hover:text-arena-blue text-white text-lg py-6 px-8">
+            <Button 
+              onClick={() => scrollToSection('courses')}
+              className="bg-arena-orange hover:bg-white hover:text-arena-blue text-white text-lg py-6 px-8"
+            >
               Discover Courses
             </Button>
-            <Button variant="outline" className="border-white text-arena-blue hover:bg-white hover:text-arena-orange text-lg py-6 px-8">
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              variant="outline" 
+              className="border-white text-arena-blue hover:bg-white hover:text-arena-orange text-lg py-6 px-8"
+            >
               Contact Us
             </Button>
           </div>

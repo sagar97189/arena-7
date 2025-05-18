@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Phone, Mail } from "lucide-react";
 import {
@@ -75,11 +74,11 @@ const FAQSection = () => {
             </p>
             <div className="flex justify-center space-x-4">
               <a 
-                href="tel:+919999999999" 
+                href="tel:+919213404924" 
                 className="flex items-center text-arena-blue hover:text-arena-orange"
               >
                 <Phone size={18} className="mr-2" />
-                +91 99999 99999
+                +919213404924
               </a>
               <a 
                 href="mailto:info@arenafaridabad.in" 

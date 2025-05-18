@@ -3,6 +3,68 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { useParams, useLocation, Navigate } from "react-router-dom";
+import { Phone, MessageSquare } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+const courses = [
+  "Animation & VFX Prime",
+  "Game Art & Design",
+  "Graphic & Web Design",
+  "Digital Marketing",
+  "3D Animation Mastery",
+  "Visual Effects & Compositing",
+  "Motion Graphics & Animation",
+  "UI/UX Design Professional"
+];
+
+const ContactInfo = ({ courseName }: { courseName: string }) => {
+  return (
+    <div className="bg-white p-6 md:p-8 rounded-lg">
+      <h3 className="text-arena-blue text-2xl font-bold mb-6">Contact Us for {courseName}</h3>
+      <div className="space-y-6">
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-2">Get in Touch</h4>
+          <p className="text-gray-600 mb-4">
+            Reach out to us directly through call or WhatsApp for quick assistance and enrollment details.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a 
+            href="tel:+919213404924"
+            className="flex items-center justify-center gap-3 bg-arena-orange hover:bg-arena-blue text-white py-4 px-6 rounded-lg transition-colors"
+          >
+            <Phone className="w-5 h-5" />
+            <span className="font-medium">Call Now</span>
+          </a>
+          
+          <a 
+            href="https://wa.me/919213404924"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg transition-colors"
+          >
+            <MessageSquare className="w-5 h-5" />
+            <span className="font-medium">WhatsApp</span>
+          </a>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-gray-200">
+          <h4 className="text-lg font-semibold text-gray-800 mb-2">Contact Details</h4>
+          <div className="space-y-2 text-gray-600">
+            <p>Phone: +91 92134 04924</p>
+            <p>Email: info@arenafaridabad.in</p>
+            <p>Address: Arena Animation Sector 7, Faridabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const CourseDetails = () => {
   const { courseId } = useParams();
@@ -117,10 +179,17 @@ const CourseDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button className="bg-arena-orange hover:bg-white hover:text-arena-blue text-white text-lg py-6 px-8">
-                  Enroll Now
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-arena-blue text-lg py-6 px-8">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="bg-arena-orange hover:bg-white hover:text-arena-blue text-white text-lg py-6 px-8">
+                      Enroll Now
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[500px] p-0">
+                    <ContactInfo courseName={courseData.title} />
+                  </DialogContent>
+                </Dialog>
+                <Button variant="outline" className="border-arena-blue text-arena-blue hover:bg-white hover:text-arena-orange text-lg py-6 px-8">
                   Download Brochure
                 </Button>
               </div>
@@ -183,9 +252,16 @@ const CourseDetails = () => {
                     ))}
                   </div>
                   
-                  <Button className="bg-arena-orange hover:bg-arena-blue text-white w-full mt-6">
-                    Apply Now
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className="bg-arena-orange hover:bg-arena-blue text-white w-full mt-6">
+                        Apply Now
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[500px] p-0">
+                      <ContactInfo courseName={courseData.title} />
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>

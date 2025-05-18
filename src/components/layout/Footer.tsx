@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Twitter, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -35,37 +34,52 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Useful Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="/" className="flex items-center hover:text-arena-orange transition-colors">
                   <ChevronRight size={16} className="mr-2" />
                   <span>Home</span>
                 </a>
               </li>
               <li>
-                <a href="#whychooseus" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="#whychooseus" className="flex items-center hover:text-arena-orange transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('whychooseus')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ChevronRight size={16} className="mr-2" />
                   <span>About Us</span>
                 </a>
               </li>
               <li>
-                <a href="#courses" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="#courses" className="flex items-center hover:text-arena-orange transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ChevronRight size={16} className="mr-2" />
                   <span>Courses</span>
                 </a>
               </li>
               <li>
-                <a href="#placements" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="#placements" className="flex items-center hover:text-arena-orange transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('placements')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ChevronRight size={16} className="mr-2" />
                   <span>Placements</span>
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="#gallery" className="flex items-center hover:text-arena-orange transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ChevronRight size={16} className="mr-2" />
                   <span>Gallery</span>
                 </a>
               </li>
               <li>
-                <a href="#contact" className="flex items-center hover:text-arena-orange transition-colors">
+                <a href="#contact" className="flex items-center hover:text-arena-orange transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ChevronRight size={16} className="mr-2" />
                   <span>Contact</span>
                 </a>
@@ -83,7 +97,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-3 text-arena-orange" />
-                <span>+91 99999 99999</span>
+                <span>+919213404924</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 text-arena-orange" />
