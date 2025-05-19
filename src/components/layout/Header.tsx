@@ -73,7 +73,6 @@ const Header = () => {
       >
         <div className="container flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3">
-            <span className="text-2xl font-bold text-arena-blue">ARENA ANIMATION</span>
             <img 
               src="/images/arena-logo.jpg" 
               alt="Arena Animation Logo" 
